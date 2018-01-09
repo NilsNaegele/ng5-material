@@ -1,0 +1,33 @@
+.app-content {
+  padding: 20px;
+}
+
+.app-content mat-card {
+  margin: 20px;
+}
+
+.container {
+  z-index: 20;
+  min-height: 100vh;
+  display: inherit;
+  padding: 0;
+}
+
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  > *:not(router-outlet) {
+    flex: 1;
+    display: block;
+  }
+}

@@ -1,0 +1,61 @@
+<div id="content">
+      <mat-card>
+        <h1>Contact Me</h1>
+        <form class="form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+          <mat-input-container class="full-width">
+              <input matInput placeholder="Organization" id="organization" name="organization"
+                value="Open Source" ngModel required>
+          </mat-input-container>
+
+          <table class="full-width" cellspacing="0">
+              <tr>
+                <td>
+                  <mat-input-container class="full-width">
+                    <input matInput placeholder="First Name" id="firstname" name="firstname"
+                           ngModel required>
+                  </mat-input-container>
+                </td>
+                <td>
+                  <mat-input-container>
+                    <input matInput placeholder="Last Name" id="lastname" name="lastname"
+                            ngModel required>
+                  </mat-input-container>
+                </td>
+              </tr>
+          </table>
+          <p>
+              <mat-input-container>
+                <textarea matInput placeholder="Address" value="Unter Den Linden 100"
+                          name="address" id="address"
+                          ngModel required></textarea>
+              </mat-input-container>
+          </p>
+          <table class="full-width" cellspacing="0">
+                <tr>
+                  <td>
+                    <mat-input-container class="full-width">
+                          <input matInput placeholder="City" id="city" name="city" ngModel required>
+                    </mat-input-container>
+                  </td>
+                  <td>
+                    <mat-input-container class="full-width">
+                      <input matInput #postalCode maxlength="6" id="postal" name="postal" placeholder="Zip Code"
+                      value="10000A" ngModel required>
+                      <mat-hint align="end">{{ postalCode.value.length }} / 6</mat-hint>
+                    </mat-input-container>
+                  </td>
+                </tr>
+          </table>
+          <p>
+            <mat-input-container class="full-width">
+              <textarea matInput placeholder="Your Message" name="messge" id="message"
+              ngModel required></textarea>
+            </mat-input-container>
+          </p>
+          <br>
+          <button mat-raised-button type="submit" [disabled]="contactForm.invalid">Send</button>
+        </form>
+
+      </mat-card>
+
+</div>
