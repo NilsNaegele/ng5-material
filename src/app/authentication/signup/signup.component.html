@@ -1,3 +1,42 @@
-<p>
-  signup works!
-</p>
+<mat-card>
+  <h3>Social Registration</h3>
+  <form (ngSubmit)="onSignUpGoogle(g)" #g="ngForm">
+    <mat-card-actions class="button">
+      <button class="btn btn-block btn-social btn-google" type="submit" [disabled]="!g.valid">
+        <span class="fa fa-google"></span>
+        Sign Up with your GOOGLE Account
+      </button>
+    </mat-card-actions>
+  </form>
+  <form (ngSubmit)="onSignUpFacebook(fb)" #fb="ngForm">
+    <mat-card-actions class="button">
+      <button class="btn btn-block btn-social btn-facebook" type="submit" [disabled]="!fb.valid">
+        <span class="fa fa-facebook"></span>
+        Sign Up with your FACEBOOK Account
+      </button>
+    </mat-card-actions>
+  </form>
+  <form (ngSubmit)="onSignUpGithub(gh)" #gh="ngForm">
+    <mat-card-actions class="button">
+      <button class="btn btn-block btn-social btn-github" type="submit" [disabled]="!gh.valid">
+        <span class="fa fa-github"></span>
+        Sign Up with your GITHUB Account
+      </button>
+    </mat-card-actions>
+  </form>
+  <hr>
+  <h3>Register with your email</h3>
+  <form (ngSubmit)="onRegister(f)" #f="ngForm">
+    <mat-input-container class="full-width">
+      <input matInput placeholder="Email" type="email" id="email" name="email" ngModel>
+    </mat-input-container>
+    <mat-input-container class="full-width">
+      <input matInput placeholder="Password" type="password" id="password" name="password" ngModel>
+    </mat-input-container>
+    <mat-card-actions class="button">
+      <button mat-raised-button class="primary" type="submit" [disabled]="!f.valid">
+        Register
+      </button>
+    </mat-card-actions>
+  </form>
+</mat-card>
