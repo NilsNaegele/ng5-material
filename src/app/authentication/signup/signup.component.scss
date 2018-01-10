@@ -4,6 +4,17 @@ mat-card {
   margin: 100px auto;
 }
 
+mat-progress-bar {
+  margin-top: -21px;
+}
+
+mat-spinner {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto 0 auto;
+  z-index: 5;
+}
+
 .button {
   display: grid;
   margin-top: 0px;

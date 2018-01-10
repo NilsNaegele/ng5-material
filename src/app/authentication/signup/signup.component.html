@@ -1,3 +1,4 @@
+<mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
 <mat-card>
   <h3>Social Registration</h3>
   <form (ngSubmit)="onSignUpGoogle(g)" #g="ngForm">

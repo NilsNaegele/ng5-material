@@ -6,7 +6,7 @@ import * as firebase from 'firebase';
 
 @Injectable()
 export class AuthenticationService {
-  token = '';
+  token = null;
   constructor(private afAuth: AngularFireAuth,
               private router: Router) { }
 
