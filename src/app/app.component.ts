@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import * as firebase from 'firebase';
+import { AngularFireDatabase, FirebaseObjectObservable } from 'angularfire2/database';
+import { AngularFireAuth } from 'angularfire2/auth';
+import * as firebase from 'firebase';
 
 import { environment } from './../environments/environment';
 
@@ -12,7 +14,6 @@ export class AppComponent implements OnInit {
   title = 'app';
 
   ngOnInit() {
-    // firebase.initializeApp(environment.firebase);
   }
 
 }

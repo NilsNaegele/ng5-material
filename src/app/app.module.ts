@@ -16,6 +16,7 @@ import { PipesModule } from './pipes/pipes.module';
 import { BackgroundsModule } from './components/background/backgrounds.module';
 import { BlocksModule } from './components/blocks/blocks.module';
 import { AuthenticationModule } from './authentication/authentication.module';
+import { ProfileModule } from './profile/profile.module';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -59,6 +60,7 @@ import { UserService } from './components/shared/services/user.service';
     BlocksModule,
     BackgroundsModule,
     AuthenticationModule,
+    ProfileModule,
     AppRoutingModule
   ],
   providers: [ AlertService, UserService, AuthenticationService ],

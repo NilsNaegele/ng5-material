@@ -8,6 +8,8 @@ import { InfoComponent } from './components/info/info.component';
 import { SigninComponent } from './authentication/signin/signin.component';
 import { SignupComponent } from './authentication/signup/signup.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { ProfileSettingsComponent } from './profile/profile-settings.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -17,7 +19,10 @@ const appRoutes: Routes = [
   { path: 'info', component: HomeComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'login', component: SigninComponent },
-  { path: 'info', component: HomeComponent },
+
+  { path: 'profile', component: ProfileComponent },
+  { path: 'profile-settings', component: ProfileSettingsComponent },
+
   { path: '**', component: NotFoundComponent }
 
 ];

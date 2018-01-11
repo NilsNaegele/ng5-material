@@ -1,0 +1,37 @@
+<div class="profile-settings">
+  <mat-card>
+    <h3>My Profile Settings</h3>
+    <form class="form" (ngSubmit)="onUpdateUserInfo(pf)" #pf="ngForm">
+          <mat-input-container class="form-group">
+              <input matInput
+                    placeholder="Username"
+                    id="displayName"
+                    name="displayName"
+                    [(ngModel)]="displayName"
+                    required>
+          </mat-input-container>
+          <mat-input-container class="form-group">
+              <input matInput
+                    placeholder="Your Bio"
+                    id="bio"
+                    name="bio"
+                    [(ngModel)]="bio"
+                    required>
+          </mat-input-container>
+          <hr>
+          <mat-card-actions class="button">
+                <button mat-raised-button class="primary" type="submit">Send</button>
+          </mat-card-actions>
+
+          <mat-card-actions class="button">
+              <button mat-raised-button class="primary"
+                      (click)="onLogout()">Logout</button>
+          </mat-card-actions>
+
+          <mat-card-actions class="button">
+              <button mat-raised-button class="primary"
+                      (click)="onPasswordReset()">Reset Password</button>
+          </mat-card-actions>
+    </form>
+  </mat-card>
+</div>
