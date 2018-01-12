@@ -1,3 +1,53 @@
-<p>
-  phone-signin works!
-</p>
+<mat-card>
+  <div [hidden]="currentUser">
+    <h3>Phone Number login</h3>
+    <br>+
+    <mat-input-container>
+      <input matInput type="text"
+             [(ngModel)]="phoneNumber.country"
+             class="input"
+             placeholder="49"
+             maxLength="2">
+    </mat-input-container>
+    <mat-input-container>
+        <input matInput type="text"
+               [(ngModel)]="phoneNumber.area"
+               class="input"
+               placeholder="171"
+               maxLength="3">
+      </mat-input-container>
+      <mat-input-container>
+          <input matInput type="text"
+                 [(ngModel)]="phoneNumber.prefix"
+                 class="input"
+                 placeholder="531"
+                 maxLength="3">
+        </mat-input-container>
+        <mat-input-container>
+            <input matInput type="text"
+                   [(ngModel)]="phoneNumber.line"
+                   class="input"
+                   placeholder="0594"
+                   maxLength="4">
+          </mat-input-container>
+
+          <div id="recaptcha-container"></div>
+
+          <button mat-raised-button color="warn" (click)="sendLogInCode()">SMS me Login Code</button>
+
+          <div *ngIf="windowRef.confirmationResult">
+            <hr>
+            <h4>Enter your verifcation code here</h4><br>
+            <mat-input-container>
+              <input matInput type="text" name="code" [(ngModel)]="verificationCode">
+            </mat-input-container>
+            <button mat-raised-button color="warn" (click)="verifyLogInCode()">Verify</button>
+          </div>
+  </div>
+</mat-card>
+
+<div *ngIf="currentUser">
+  You have successfully logged in with your phone number!
+
+  UserId: {{ currentUser?.uid }}
+</div>

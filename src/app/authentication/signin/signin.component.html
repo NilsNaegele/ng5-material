@@ -47,11 +47,13 @@
   <hr>
 
   <h3>Login Anonymous</h3>
-    <form (ngSubmit)="onSignInAnonymous(a)" #a="ngForm">
-      <mat-card-actions class="button">
-          <button mat-raised-button color="warn" class="primary" type="submit">Login Anonymous</button>
-      </mat-card-actions>
-    </form>
-
-<!-- <app-phone-signin></app-phone-signin> -->
+  <form (ngSubmit)="onSignInAnonymous(a)" #a="ngForm">
+    <mat-card-actions class="button">
+      <button mat-raised-button color="warn" class="primary" type="submit">Login Anonymous</button>
+    </mat-card-actions>
+  </form>
 </mat-card>
+<mat-card>
+    <app-phone-signin></app-phone-signin>
+  </mat-card>
+

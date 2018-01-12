@@ -31,7 +31,7 @@ import { EmailMeComponent } from './components/email-me/email-me.component';
 import { AlertService } from './components/shared/services/alert.service';
 import { AuthenticationService } from './components/shared/services/authentication.service';
 import { UserService } from './components/shared/services/user.service';
-
+import { WindowService } from './components/shared/services/window.service';
 
 
 @NgModule({
@@ -63,7 +63,7 @@ import { UserService } from './components/shared/services/user.service';
     ProfileModule,
     AppRoutingModule
   ],
-  providers: [ AlertService, UserService, AuthenticationService ],
+  providers: [ AlertService, UserService, AuthenticationService, WindowService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
