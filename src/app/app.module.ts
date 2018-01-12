@@ -17,6 +17,7 @@ import { BackgroundsModule } from './components/background/backgrounds.module';
 import { BlocksModule } from './components/blocks/blocks.module';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { ProfileModule } from './profile/profile.module';
+import { MessagesModule } from './components/messages/messages.module';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -56,6 +57,7 @@ import { WindowService } from './components/shared/services/window.service';
     ReactiveFormsModule,
     HttpClientModule,
     MaterialModule,
+    MessagesModule,
     PipesModule,
     BlocksModule,
     BackgroundsModule,

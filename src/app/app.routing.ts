@@ -10,6 +10,7 @@ import { SignupComponent } from './authentication/signup/signup.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { ProfileSettingsComponent } from './profile/profile-settings.component';
 import { ProfileComponent } from './profile/profile.component';
+import { MessagesComponent } from './components/messages/messages.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -22,7 +23,7 @@ const appRoutes: Routes = [
 
   { path: 'profile', component: ProfileComponent },
   { path: 'profile-settings', component: ProfileSettingsComponent },
-
+  { path: 'messages', component: MessagesComponent },
   { path: '**', component: NotFoundComponent }
 
 ];
