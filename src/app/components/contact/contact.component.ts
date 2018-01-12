@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 
 import { Contact } from '../shared/models/contact';
 import { AlertService } from './../shared/services/alert.service';
+import { UserService } from './../shared/services/user.service';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +12,7 @@ import { AlertService } from './../shared/services/alert.service';
 })
 export class ContactComponent implements OnInit {
 
-  constructor(private alertService: AlertService) { }
+  constructor(private alertService: AlertService, private userService: UserService) { }
 
   ngOnInit() {
   }
@@ -26,7 +27,8 @@ export class ContactComponent implements OnInit {
     const message = form.value.message;
     const contact = new Contact(organization, firstName, lastName,
                                 address, city, postal, message);
-    console.log(contact);
+    this.userService.contactFormSend(organization, firstName, lastName, address,
+                                      city, postal, message);
   }
 
 }

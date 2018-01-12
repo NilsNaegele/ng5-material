@@ -29,6 +29,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Code of Conduct
 
+Grundgesetz Artikel 1: Die Würde des Menschen ist unantastbar. Sie zu achten und schützen ist Verpflichtung aller Staatsgewalt.
+
 Human dignity is inviolable. To honor and protect is the duty of all.
 
 ## Honor

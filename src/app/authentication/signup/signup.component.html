@@ -3,7 +3,8 @@
   <h3>Social Registration</h3>
   <form (ngSubmit)="onSignUpGoogle(g)" #g="ngForm">
     <mat-card-actions class="button">
-      <button class="btn btn-block btn-social btn-google" type="submit" [disabled]="!g.valid">
+      <button class="btn btn-block btn-social btn-google"
+              type="submit" [disabled]="!g.valid">
         <span class="fa fa-google"></span>
         Sign Up with your GOOGLE Account
       </button>

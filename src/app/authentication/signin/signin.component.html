@@ -1,3 +1,57 @@
-<p>
-  signin works!
-</p>
+<mat-progress-bar *ngIf="isLoading" mode="indeterminate"></mat-progress-bar>
+
+<mat-card>
+  <h3>Social Login</h3>
+  <form (ngSubmit)="onSignInGoogle(g)" #g="ngForm">
+    <mat-card-actions>
+      <button class="btn btn-block btn-social btn-google button" type="submit" [disabled]="!g.valid">
+        <span class="fa fa-google"></span>
+        Login with Your GOOGLE Account
+      </button>
+    </mat-card-actions>
+  </form>
+  <form (ngSubmit)="onSignInFacebook(fb)" #fb="ngForm">
+    <mat-card-actions>
+      <button class="btn btn-block btn-social btn-facebook button" type="submit" [disabled]="!fb.valid">
+        <span class="fa fa-facebook"></span>
+        Login with Your FACEBOOK Account
+      </button>
+    </mat-card-actions>
+  </form>
+  <form (ngSubmit)="onSignInGithub(gh)" #gh="ngForm">
+    <mat-card-actions>
+      <button class="btn btn-block btn-social btn-github button" type="submit" [disabled]="!g.valid">
+        <span class="fa fa-github"></span>
+        Login with Your GITHUB Account
+      </button>
+    </mat-card-actions>
+  </form>
+
+  <hr>
+
+  <h3>Login</h3>
+  <form (ngSubmit)="onSignIn(f)" #f="ngForm">
+    <mat-input-container class="full-width">
+      <input matInput placeholder="Email" type="email" id="email" name="email" ngModel required>
+    </mat-input-container>
+    <mat-input-container>
+      <input matInput placeholder="Password" type="password" id="password" name="password" ngModel required>
+    </mat-input-container>
+    <mat-card-actions class="button">
+      <button mat-raised-button class="primary" type="submit" [disabled]="!f.valid">
+        Login
+      </button>
+    </mat-card-actions>
+  </form>
+
+  <hr>
+
+  <h3>Login Anonymous</h3>
+    <form (ngSubmit)="onSignInAnonymous(a)" #a="ngForm">
+      <mat-card-actions class="button">
+          <button mat-raised-button color="warn" class="primary" type="submit">Login Anonymous</button>
+      </mat-card-actions>
+    </form>
+
+<!-- <app-phone-signin></app-phone-signin> -->
+</mat-card>
