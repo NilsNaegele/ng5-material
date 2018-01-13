@@ -18,13 +18,13 @@ import { BlocksModule } from './components/blocks/blocks.module';
 import { AuthenticationModule } from './authentication/authentication.module';
 import { ProfileModule } from './profile/profile.module';
 import { MessagesModule } from './components/messages/messages.module';
+import { InfoModule } from './components/info/info.module';
 
 import { AppComponent } from './app.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { HomeComponent } from './components/home/home.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { ContactComponent } from './components/contact/contact.component';
-import { InfoComponent } from './components/info/info.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
 import { EmailMeComponent } from './components/email-me/email-me.component';
@@ -33,7 +33,7 @@ import { AlertService } from './components/shared/services/alert.service';
 import { AuthenticationService } from './components/shared/services/authentication.service';
 import { UserService } from './components/shared/services/user.service';
 import { WindowService } from './components/shared/services/window.service';
-
+import { AuthGuardService } from './components/shared/services/auth-guard.service';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,6 @@ import { WindowService } from './components/shared/services/window.service';
     HomeComponent,
     AboutMeComponent,
     ContactComponent,
-    InfoComponent,
     HeaderComponent,
     FooterComponent,
     NotFoundComponent,
@@ -57,6 +56,7 @@ import { WindowService } from './components/shared/services/window.service';
     ReactiveFormsModule,
     HttpClientModule,
     MaterialModule,
+    InfoModule,
     MessagesModule,
     PipesModule,
     BlocksModule,
@@ -65,7 +65,8 @@ import { WindowService } from './components/shared/services/window.service';
     ProfileModule,
     AppRoutingModule
   ],
-  providers: [ AlertService, UserService, AuthenticationService, WindowService ],
+  providers: [ AlertService, UserService, AuthenticationService,
+               WindowService, AuthGuardService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

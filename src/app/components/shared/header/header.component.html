@@ -87,6 +87,13 @@
           <mat-icon class="login">{{ item.icon }}</mat-icon>
           <span>{{ item.title }}</span>
         </a>
+        <a mat-menu-item
+              routerLink="/profile-settings"
+              [queryParams]="{profile: 1}"
+              fragment="editProfile">
+              <mat-icon class="settings">settings</mat-icon>
+              <span>Settings</span>
+        </a>
         <a mat-menu-item (click)="onLogout()">
           <mat-icon class="logout">lock_outline</mat-icon>
           <span>Logout</span>

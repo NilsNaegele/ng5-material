@@ -1,3 +1,64 @@
-<p>
-  info works!
-</p>
+<app-carousel></app-carousel>
+
+<div id="content">
+  <mat-card>
+        <h1>Angular Material 5</h1>
+        <h4>Various Components ready to use in your projects.</h4>
+        <hr>
+
+        <h3>Two-way data binding: </h3>
+        <mat-input-container class="full-width">
+          <input matInput
+                 placeholder="I am feeling good!"
+                 type="text"
+                 [(ngModel)]="answer">
+        </mat-input-container>
+
+        <mat-toolbar>Repeat yourself: {{ answer }}</mat-toolbar>
+        <hr>
+
+
+        <h3>Material Design Date Picker:</h3>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Select a date">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <hr>
+
+        <h3>Material Design Sidenav:</h3>
+        <mat-sidenav-container class="container">
+          <mat-sidenav #sidenav class="sidenav">
+                <p>This is the sidenav!</p>
+                <p>Hi baby. I love you.</p>
+          </mat-sidenav>
+          <div class="sidenav-content">
+            <button type="button"
+                    mat-raised-button
+                    color="warn"
+                    (click)="sidenav.open(); toggle()">
+                    {{ isOpen ? 'Close' : 'Open' }} Sidenav
+                  </button>
+          </div>
+        </mat-sidenav-container>
+        <hr>
+
+
+        <h3>Material Design Tooltip:</h3>
+        <span matTooltip="I love you">
+          <mat-icon class="icon" color="warn">favorite</mat-icon>
+        </span>
+        <br>
+        <hr>
+
+        <h3>Material Design Slide Toggle</h3>
+        <mat-slide-toggle class="margin">
+          Click me!
+        </mat-slide-toggle>
+
+        <!-- <app-table></app-table> -->
+
+
+  </mat-card>
+
+</div>
