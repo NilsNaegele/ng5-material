@@ -1,3 +1,31 @@
-<p>
-  table works!
-</p>
+<h3>Angular Material CDK Data Table</h3>
+<div class="container mat-elevation-z8">
+
+<mat-table #table [dataSource]="dataSource">
+
+  <ng-container cdkColumnDef="id">
+    <mat-header-cell *cdkHeaderCellDef>ID</mat-header-cell>
+    <mat-cell *cdkCellDef="let row">{{ row.id }}</mat-cell>
+  </ng-container>
+
+  <ng-container cdkColumnDef="name">
+      <mat-header-cell *cdkHeaderCellDef>Name</mat-header-cell>
+      <mat-cell *cdkCellDef="let row">{{ row.name }}</mat-cell>
+  </ng-container>
+
+  <ng-container cdkColumnDef="progress">
+      <mat-header-cell *cdkHeaderCellDef>Progress</mat-header-cell>
+      <mat-cell *cdkCellDef="let row">{{ row.progress }}%</mat-cell>
+  </ng-container>
+
+  <ng-container cdkColumnDef="color">
+      <mat-header-cell *cdkHeaderCellDef>Color</mat-header-cell>
+      <mat-cell *cdkCellDef="let row" [style.color]="row.color">{{ row.color }}</mat-cell>
+  </ng-container>
+
+  <mat-header-row *cdkHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *cdkRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>
+
+</div>

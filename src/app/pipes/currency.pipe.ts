@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-currency-pipe',
   template: `
       <fieldset>
+            <h3>Currency Pipe:</h3>
             <div>
                 <p>AngularJS: {{ angularJSPrice | currency:'EUR': false }}</p>
                 <p>Angular 6: {{ angular6Price | currency:'EUR':true:'4.2-2' }}</p>
